@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Controllers;
+
+use App\Controllers\BaseController;
+
+class Users extends BaseController
+{
+    public function index()
+    {
+        return view('user/landing');
+    }
+
+    public function login()
+    {
+        return view('user/login');
+    }
+
+    public function signup()
+    {
+        return view('user/signup');
+    }
+    public function receipt()
+    {
+        return view('user/receipt');
+    }   
+    public function moodboard()
+    {
+        return view('user/moodboard');
+    }
+    public function roadmap()
+    {
+        return view('user/roadmap');
+    }
+}
