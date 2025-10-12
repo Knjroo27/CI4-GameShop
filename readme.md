@@ -1,15 +1,18 @@
 <h3 align="center">
-    AD - GameShop
+    FordaGo - Digital Credit & Giftcard Hub
 </h3>
 
 ## Overview
-  Focus on selling digital credits and games instantly.
+FordaGo is a modern platform that offers instant access to digital game credits and global gift cards, providing a quick and easy way to purchase without the hassle.
 
 ## Technology Stack
-- CodeIgniter 4 (PHP Framework)
+- HTML, CSS, JavaScript  
+- CodeIgniter 4 (PHP Framework)  
 
 ## Features
-- Wide Game Support for top up
-- Multiple Payment Options
-- No need for long registration 
-- Promos & Rewards
+- Instant Purchase of Game Credits and Gift Cards  
+- Multiple Payment Options (GCash, Cash on Delivery for members)  
+- No Required Account for Quick Transactions  
+- Secure and Smooth Checkout Flow  
+- Member-Exclusive Promos & Rewards  
+- Sleek and Modern Interface with Pop-up Purchase Forms and Digital Receipts  
