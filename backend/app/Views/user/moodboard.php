@@ -80,7 +80,6 @@
     .c4 { background: #48cae4; color: #003049; }
     .c5 { background: #90e0ef; color: #003049; }
 
-    /* Typography */
     .typography {
       display: flex;
       flex-direction: column;
@@ -89,7 +88,6 @@
     .typography h1 { font-size: 2.5em; }
     .typography h3 { font-weight: 600; }
 
-    /* Buttons */
     .buttons {
       display: flex;
       gap: 20px;
@@ -112,7 +110,6 @@
     }
     .btn-outline:hover { background: white; color: #0096c7; }
 
-    /* Card samples */
     .card-showcase {
       display: flex;
       gap: 25px;
@@ -136,14 +133,34 @@
     }
     .card h3 { font-size: 1.1em; margin-bottom: 8px; }
     .card p { font-size: 0.9em; color: #eafff8; }
-
-    footer {
-      text-align: center;
-      padding: 25px;
+footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 30px 80px;
       background: rgba(255,255,255,0.08);
       backdrop-filter: blur(10px);
       color: #eafff8;
+      animation: fadeIn 1s ease-in;
+    }
+    footer div { flex: 1; min-width: 200px; margin-bottom: 15px; }
+    footer h4 { margin-bottom: 10px; color: white; }
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 5px; }
+    footer ul li a {
+      text-decoration: none;
+      color: #eafff8;
       font-size: 0.9em;
+      transition: color 0.3s;
+    }
+    footer ul li a:hover { color: white; }
+    footer p {
+      text-align: center;
+      width: 100%;
+      font-size: 0.9em;
+      margin-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 10px;
     }
 
     @keyframes fadeIn {
@@ -215,8 +232,9 @@
         </div>
       </div>
     </section>
+
+    <?= view('components/footer') ?>
   </main>
 
-  <footer>© 2025 FordaGo. All Rights Reserved.</footer>
 </body>
 </html>
