@@ -113,38 +113,37 @@
 </head>
 <body>
 
-<header>
-  <div class="left-nav">
-    <a href="moodboard">Mood Board</a>
-    <a href="roadmap">Roadmap</a>
-  </div>
-  <h1>FordaGo</h1>
-  <nav>
-    <a href="login">Sign In</a>
-    <a href="signup">Sign Up</a>
-  </nav>
-</header>
+<?= view('components/header') ?>
 
 <section class="hero">
   <h2>Load Up. Level Up. FordaGo</h2>
   <p>Instantly grab your favorite gift cards — Steam, PlayStation, Xbox, and more — with just a few clicks.</p>
 
   <div class="hero-buttons">
-    <button id="howItWorksBtn">How it Works</button>
-    <button id="promosBtn">Promos</button>
+    <?= view('components/btns/mainbtn', ['text' => 'How it Works', 'id' => 'howItWorksBtn']) ?>
+    <?= view('components/btns/mainbtn', ['text' => 'Promos', 'id' => 'promosBtn']) ?>
   </div>
 </section>
 
 <section class="product-list">
-  <div class="product" data-product="Steam Wallet"><img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg"><h3>Steam Wallet</h3><button class="buy-btn">Buy Now</button></div>
-  <div class="product" data-product="Google Play"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"><h3>Google Play</h3><button class="buy-btn">Buy Now</button></div>
-  <div class="product" data-product="Apple Gift Card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"><h3>Apple Gift Card</h3><button class="buy-btn">Buy Now</button></div>
-  <div class="product" data-product="PlayStation Gift Card"><img src="https://1000logos.net/wp-content/uploads/2017/05/PlayStation-Logo.png" alt="PlayStation Gift Card"><h3>PlayStation Gift Card</h3><button class="buy-btn">Buy Now</button></div>
-  <div class="product" data-product="Xbox Gift Card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg"><h3>Xbox Gift Card</h3><button class="buy-btn">Buy Now</button></div>
-  <div class="product" data-product="Nintendo eShop Card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg"><h3>Nintendo eShop Card</h3><button class="buy-btn">Buy Now</button></div>
-  <div class="product" data-product="Amazon Gift Card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"><h3>Amazon Gift Card</h3><button class="buy-btn">Buy Now</button></div>
-  <div class="product" data-product="Netflix Gift Card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"><h3>Netflix Gift Card</h3><button class="buy-btn">Buy Now</button></div>
-  <div class="product" data-product="Spotify Gift Card"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"><h3>Spotify Gift Card</h3><button class="buy-btn">Buy Now</button></div>
+  <?= view('components/cards/product_card', 
+  ['img' => 'https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg', 'title' => 'Steam Wallet', 'dataproduct' => 'steam_wallet']) ?>
+  <?= view('components/cards/product_card', 
+  ['img' => 'https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg', 'title' => 'Google Play', 'dataproduct' => 'google_play']) ?>
+  <?= view('components/cards/product_card', 
+  ['img' => 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', 'title' => 'Apple Gift Card', 'dataproduct' => 'apple_gift_card']) ?>
+  <?= view('components/cards/product_card', 
+  ['img' => 'https://1000logos.net/wp-content/uploads/2017/05/PlayStation-Logo.png', 'title' => 'PlayStation Gift Card', 'dataproduct' => 'playstation_gift_card']) ?>
+  <?= view('components/cards/product_card', 
+  ['img' => 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg', 'title' => 'Xbox Gift Card', 'dataproduct' => 'xbox_gift_card']) ?>
+  <?= view('components/cards/product_card', 
+  ['img' => 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg', 'title' => 'Nintendo eShop Card', 'dataproduct' => 'nintendo_eshop_card']) ?>
+  <?= view('components/cards/product_card', 
+  ['img' => 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg', 'title' => 'Amazon Gift Card', 'dataproduct' => 'amazon_gift_card']) ?>
+  <?= view('components/cards/product_card', 
+  ['img' => 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg', 'title' => 'Netflix Gift Card', 'dataproduct' => 'netflix_gift_card']) ?>
+  <?= view('components/cards/product_card', 
+  ['img' => 'https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg', 'title' => 'Spotify Gift Card', 'dataproduct' => 'spotify_gift_card']) ?>
 </section>
 
 <div class="modal" id="buyModal">
@@ -191,12 +190,7 @@
   </div>
 </div>
 
-<footer>
-  <div><h4>About FordaGo</h4><ul><li><a href="#">Our Story</a></li><li><a href="#">Mission & Vision</a></li></ul></div>
-  <div><h4>Support</h4><ul><li><a href="#">FAQs</a></li><li><a href="#">Contact Us</a></li></ul></div>
-  <div><h4>Connect</h4><ul><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li></ul></div>
-  <p>© 2025 FordaGo. All Rights Reserved.</p>
-</footer>
+<?= view('components/footer') ?>
 
 <script>
   const modal = document.getElementById('buyModal');

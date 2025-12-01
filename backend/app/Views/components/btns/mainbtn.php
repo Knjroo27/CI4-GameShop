@@ -1,0 +1,1 @@
+<button id="<?= $id ?? "default" ?>"><?= $text ?? "Default" ?></button>

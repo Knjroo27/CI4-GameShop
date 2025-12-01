@@ -1,3 +1,16 @@
+<?php
+  $session = session();
+  $errors = $session->getFlashdata('error') ?? '';
+
+  if (!empty($errors)) {
+      echo '<div style="background-color: #ff4d4d; color: white; padding: 10px; margin-bottom: 15px; border-radius: 5px;">';
+      foreach ($errors as $error) {
+          echo '<p>' . esc($error) . '</p>';
+      }
+      echo '</div>';
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,10 +110,10 @@
 <body>
   <div class="login-box">
     <h2>Welcome Back!</h2>
-    <form>
-      <input type="text" placeholder="Email or Username" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Sign In</button>
+    <form method="post" action="login">
+      <input id="email" name="email" type="text" placeholder="Email or Username" value="<?= esc(old('email')) ?>" required>
+      <input id="password" name="password" type="password" placeholder="Password" required>
+      <input type="submit" value="Sign In">
     </form>
     <div class="links">
       <p>Don’t have an account? <a href="signup">Sign Up</a></p>

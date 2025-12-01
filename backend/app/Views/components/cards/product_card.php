@@ -1,0 +1,1 @@
+<div class="product" data-product="<?= $dataproduct ?? "" ?>"><img src="<?= $img ?? '/assets/images/productph.png' ?>"><h3><?= $title ?? 'Product Title' ?></h3><?= view('components/btns/buybtn') ?></div>
